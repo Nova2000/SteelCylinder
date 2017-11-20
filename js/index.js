@@ -20,8 +20,8 @@ function showmore()
         );
     }
     $("#notifications").css({
-        "height":"570px"});
+        "height":"512px"});
     $("#notificationsList").css({
-        "height":"516px"});
+        "height":"458px"});
     console.log($("#messageList"));
 }
