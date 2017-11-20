@@ -253,12 +253,13 @@ $(function() {
                 data = data.slice(1);
 
             while (data.length < totalPoints) {
-                var prev = data.length > 0 ? data[data.length - 1] : 50,
+                var prev = data.length > 0 ? data[data.length - 1] : 0,
                     y = prev + Math.random() * 10 - 5;
-                if (y < 0) {
-                    y = 0;
-                } else if (y > 90) {
-                    y = 90;
+
+                if (y <10) {
+                    y =10;
+                } else if (y > 28) {
+                    y = 28;
                 }
 
                 data.push(y);
@@ -273,7 +274,7 @@ $(function() {
         }
 
 
-        var updateInterval = 30;
+        var updateInterval = 500;
         var plot = $.plot("#dynamic-chart", [ getRandomData() ], {
             series: {
                 label: "Data",
@@ -288,7 +289,7 @@ $(function() {
             },
             yaxis: {
                 min: 0,
-                max: 100,
+                max: 40,
                 tickColor: 'rgba(255,255,255,0.15)',
                 font :{
                     lineHeight: 13,
@@ -308,7 +309,7 @@ $(function() {
                 },
                 shadowSize: 0,
                 min: 0,
-                max: 250
+                max: 24
             },
             grid: {
                 borderWidth: 1,
@@ -522,6 +523,7 @@ $(function(){
             console.log("onMarkerLabelShow");
         },
         onMarkerClick:function(e,code){
+            console.log(code);
             switch(code)
             {
                 case "0":
@@ -529,29 +531,29 @@ $(function(){
                     window.location.href='details.html';
                 }
                     break;
-                case 1:
+                case "1":
                 {
-                    window.location.href='details.html';
+                    window.location.href='details_shanghai.html';
                 }
                     break;
-                case 2:
+                case "2":
                 {
-                    window.location.href='details.html';
+                    window.location.href='details_wuxi.html';
                 }
                     break;
-                case 3:
+                case "3":
                 {
-                    window.location.href='details.html';
+                    window.location.href='details_beijing.html';
                 }
                     break;
-                case 4:
+                case "4":
                 {
-                    window.location.href='details.html';
+                    window.location.href='details_haerbin.html';
                 }
                     break;
-                case 5:
+                case "5":
                 {
-                    window.location.href='details.html';
+                    window.location.href='details_changsha.html';
                 }
                     break;
                 default:
@@ -565,7 +567,7 @@ $(function(){
     
     //World Map
     if($('#world-map')[0]) {
-	$('#world-map').vectorMap({
+        $('#world-map').vectorMap({
             map: 'world_mill_en',
             backgroundColor: 'rgba(0,0,0,0)',
             series: {
@@ -582,6 +584,14 @@ $(function(){
                     fill: '#fff'
                 },
             },
+            markers :[
+                {latLng: [23.16, 113.23], name: '广州钢瓶基地'},
+                {latLng: [31.22	, 121.48], name: '上海钢瓶基地'},
+                {latLng: [31.59, 120.29], name: '无锡钢瓶基地'},
+                {latLng: [39.92, 116.46], name: '北京钢瓶基地'},
+                {latLng: [45.75, 126.63], name: '哈尔滨钢瓶基地'},
+                {latLng: [28.21, 113], name: '长沙钢瓶基地'}
+            ],
         });
     }
 });

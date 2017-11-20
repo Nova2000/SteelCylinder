@@ -3,19 +3,19 @@
  */
 function showmore()
 {
-    var add=10-$('#notificationsList').children().length;
+    var add=9-$('#notificationsList').children().length;
     for(var i=0;i<add;i++) {
         $("#notificationsList").append(
             $('<div class="media">' +
                 '<div class="pull-left">' +
-                '<img width="40" src="img/profile-pics/3.jpg" alt="">' +
+                '<img width="40" src="img/profile-pics/ok.png" alt="">' +
                 '</div>' +
                 '<div class="media-body">' +
-                '<small class="text-muted">Nova worgon - On 17/12/2013</small>' +
+                '<small class="text-muted">Nova - On 11/11/2017</small>' +
                 '<br>' +
-                '<a class="t-overflow" href="">Maecenas venenatis enim condimentum ultrices fringilla. Nulla' +
-                'eget libero rhoncus, bibendum diam eleifend, vulputate mi. Fusce non nibh pulvinar,' +
-                'ornare turpis id</a>' +
+                '<a class="t-overflow" href="">The problem has been solved!' +
+                'Leave the valve protection cap in place until the cylinder has been secured in place and is ready to be used. ' +
+                '</a>' +
                 '</div>')
         );
     }
