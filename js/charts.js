@@ -274,7 +274,7 @@ $(function() {
         }
 
 
-        var updateInterval = 500;
+        var updateInterval = 5000;
         var plot = $.plot("#dynamic-chart", [ getRandomData() ], {
             series: {
                 label: "Data",
@@ -511,12 +511,12 @@ $(function(){
             zoomOnScroll: false,
 
             markers :[
-                {latLng: [23.16, 113.23], name: '广州钢瓶基地'},
-                {latLng: [31.22	, 121.48], name: '上海钢瓶基地'},
-                {latLng: [31.59, 120.29], name: '无锡钢瓶基地'},
-                {latLng: [39.92, 116.46], name: '北京钢瓶基地'},
-                {latLng: [45.75, 126.63], name: '哈尔滨钢瓶基地'},
-                {latLng: [28.21, 113], name: '长沙钢瓶基地'}
+                {latLng: [23.16, 113.23], name: '广州D项目'},
+                {latLng: [31.22	, 121.48], name: '上海A项目'},
+                {latLng: [31.59, 120.29], name: '无锡C项目'},
+                {latLng: [39.92, 116.46], name: '北京B项目'},
+                {latLng: [45.75, 126.63], name: '哈尔滨F项目'},
+                {latLng: [28.21, 113], name: '长沙E项目'}
             ],
         //鼠标指向标注点事件
         onMarkerLabelShow: function(event, label, code){
@@ -585,12 +585,12 @@ $(function(){
                 },
             },
             markers :[
-                {latLng: [23.16, 113.23], name: '广州钢瓶基地'},
-                {latLng: [31.22	, 121.48], name: '上海钢瓶基地'},
-                {latLng: [31.59, 120.29], name: '无锡钢瓶基地'},
-                {latLng: [39.92, 116.46], name: '北京钢瓶基地'},
-                {latLng: [45.75, 126.63], name: '哈尔滨钢瓶基地'},
-                {latLng: [28.21, 113], name: '长沙钢瓶基地'}
+                {latLng: [23.16, 113.23], name: '广州D项目'},
+                {latLng: [31.22	, 121.48], name: '上海A项目'},
+                {latLng: [31.59, 120.29], name: '无锡C项目'},
+                {latLng: [39.92, 116.46], name: '北京B项目'},
+                {latLng: [45.75, 126.63], name: '哈尔滨F项目'},
+                {latLng: [28.21, 113], name: '长沙E项目'}
             ],
         });
     }
